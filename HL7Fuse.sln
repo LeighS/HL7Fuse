@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 15
+VisualStudioVersion = 15.0.26403.7
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HL7Fuse", "HL7Fuse\HL7Fuse.csproj", "{EF3429EC-C72E-410D-AE22-E534851F3FFC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HL7Fuse.Hub", "HL7Fuse.Hub\HL7Fuse.Hub.csproj", "{95D85467-0003-40FF-A10C-D731F54059B8}"

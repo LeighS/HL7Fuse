@@ -29,6 +29,9 @@ namespace HL7Fuse.Hub.Configuration
                         case "FileEndpoint":
                             result.Add(node.Attributes["name"].Value, GetFileEndPoint(node));
                             break;
+                        case "ServiceBusEndpoint":
+                            result.Add(node.Attributes["name"].Value, GetServiceBusEndPoint(node));
+                            break;
                         case "HttpEndPoint":
                             result.Add(node.Attributes["name"].Value, GetHttpEndPoint(node));
                             break;
@@ -65,6 +68,14 @@ namespace HL7Fuse.Hub.Configuration
 
             return new FileEndPoint(target);
         }
+
+        private IEndPoint GetServiceBusEndPoint(XmlNode node)
+        {
+            
+            return new ServiceBusEndPoint();
+        }
+
+        
 
         private IEndPoint GetHttpEndPoint(XmlNode node)
         {
