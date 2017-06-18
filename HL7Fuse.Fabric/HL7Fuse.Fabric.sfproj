@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.VisualStudio.Azure.Fabric.MSBuild.1.5.0\build\Microsoft.VisualStudio.Azure.Fabric.Application.props" Condition="Exists('..\packages\Microsoft.VisualStudio.Azure.Fabric.MSBuild.1.5.0\build\Microsoft.VisualStudio.Azure.Fabric.Application.props')" />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>451927b0-e03f-4925-938a-665117fe2bfc</ProjectGuid>
+    <ProjectVersion>1.5</ProjectVersion>
+    <MinToolsVersion>1.5</MinToolsVersion>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ApplicationPackageRoot\ApplicationManifest.xml" />
+    <None Include="ApplicationParameters\Cloud.xml" />
+    <None Include="ApplicationParameters\Local.1Node.xml" />
+    <None Include="ApplicationParameters\Local.5Node.xml" />
+    <None Include="PublishProfiles\Cloud.xml" />
+    <None Include="PublishProfiles\Local.1Node.xml" />
+    <None Include="PublishProfiles\Local.5Node.xml" />
+    <None Include="Scripts\Deploy-FabricApplication.ps1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ApplicationPackageRoot\HL7.Fabric.ReceiverHostPkg\Code\Config\log4net.config" />
+    <Content Include="ApplicationPackageRoot\HL7.Fabric.ReceiverHostPkg\Code\Config\log4net.unix.config" />
+    <Content Include="ApplicationPackageRoot\HL7.Fabric.ReceiverHostPkg\Code\Config\supersocket.cmd" />
+    <Content Include="ApplicationPackageRoot\HL7.Fabric.ReceiverHostPkg\Code\Config\supersocket.sh" />
+    <Content Include="ApplicationPackageRoot\HL7.Fabric.ReceiverHostPkg\Code\HL7Fuse.exe" />
+    <Content Include="ApplicationPackageRoot\HL7.Fabric.ReceiverHostPkg\Code\HL7Fuse.exe.config" />
+    <Content Include="ApplicationPackageRoot\HL7.Fabric.ReceiverHostPkg\Code\HL7Fuse.Hub.dll" />
+    <Content Include="ApplicationPackageRoot\HL7.Fabric.ReceiverHostPkg\Code\HL7Fuse.Logging.dll" />
+    <Content Include="ApplicationPackageRoot\HL7.Fabric.ReceiverHostPkg\Code\HL7Fuse.Logging.pdb" />
+    <Content Include="ApplicationPackageRoot\HL7.Fabric.ReceiverHostPkg\Code\HL7Fuse.pdb" />
+    <Content Include="ApplicationPackageRoot\HL7.Fabric.ReceiverHostPkg\Code\HL7Fuse.vshost.exe" />
+    <Content Include="ApplicationPackageRoot\HL7.Fabric.ReceiverHostPkg\Code\HL7Fuse.vshost.exe.config" />
+    <Content Include="ApplicationPackageRoot\HL7.Fabric.ReceiverHostPkg\Code\HL7Fuse.vshost.exe.manifest" />
+    <Content Include="ApplicationPackageRoot\HL7.Fabric.ReceiverHostPkg\Code\log4net.dll" />
+    <Content Include="ApplicationPackageRoot\HL7.Fabric.ReceiverHostPkg\Code\log4net.xml" />
+    <Content Include="ApplicationPackageRoot\HL7.Fabric.ReceiverHostPkg\Code\Logs\debug.log" />
+    <Content Include="ApplicationPackageRoot\HL7.Fabric.ReceiverHostPkg\Code\Logs\err.log" />
+    <Content Include="ApplicationPackageRoot\HL7.Fabric.ReceiverHostPkg\Code\Logs\info.log" />
+    <Content Include="ApplicationPackageRoot\HL7.Fabric.ReceiverHostPkg\Code\Logs\perf.log" />
+    <Content Include="ApplicationPackageRoot\HL7.Fabric.ReceiverHostPkg\Code\Microsoft.Scripting.dll" />
+    <Content Include="ApplicationPackageRoot\HL7.Fabric.ReceiverHostPkg\Code\Microsoft.Scripting.xml" />
+    <Content Include="ApplicationPackageRoot\HL7.Fabric.ReceiverHostPkg\Code\Microsoft.ServiceBus.dll" />
+    <Content Include="ApplicationPackageRoot\HL7.Fabric.ReceiverHostPkg\Code\Microsoft.ServiceBus.xml" />
+    <Content Include="ApplicationPackageRoot\HL7.Fabric.ReceiverHostPkg\Code\Newtonsoft.Json.dll" />
+    <Content Include="ApplicationPackageRoot\HL7.Fabric.ReceiverHostPkg\Code\Newtonsoft.Json.xml" />
+    <Content Include="ApplicationPackageRoot\HL7.Fabric.ReceiverHostPkg\Code\NHapi.Base.dll" />
+    <Content Include="ApplicationPackageRoot\HL7.Fabric.ReceiverHostPkg\Code\NHapi.Model.V21.dll" />
+    <Content Include="ApplicationPackageRoot\HL7.Fabric.ReceiverHostPkg\Code\NHapi.Model.V22.dll" />
+    <Content Include="ApplicationPackageRoot\HL7.Fabric.ReceiverHostPkg\Code\NHapi.Model.V23.dll" />
+    <Content Include="ApplicationPackageRoot\HL7.Fabric.ReceiverHostPkg\Code\NHapi.Model.V231.dll" />
+    <Content Include="ApplicationPackageRoot\HL7.Fabric.ReceiverHostPkg\Code\NHapi.Model.V24.dll" />
+    <Content Include="ApplicationPackageRoot\HL7.Fabric.ReceiverHostPkg\Code\NHapi.Model.V25.dll" />
+    <Content Include="ApplicationPackageRoot\HL7.Fabric.ReceiverHostPkg\Code\NHapi.Model.V251.dll" />
+    <Content Include="ApplicationPackageRoot\HL7.Fabric.ReceiverHostPkg\Code\NHapiTools.Base.dll" />
+    <Content Include="ApplicationPackageRoot\HL7.Fabric.ReceiverHostPkg\Code\NHapiTools.Model.V21.dll" />
+    <Content Include="ApplicationPackageRoot\HL7.Fabric.ReceiverHostPkg\Code\NHapiTools.Model.V22.dll" />
+    <Content Include="ApplicationPackageRoot\HL7.Fabric.ReceiverHostPkg\Code\NHapiTools.Model.V23.dll" />
+    <Content Include="ApplicationPackageRoot\HL7.Fabric.ReceiverHostPkg\Code\NHapiTools.Model.V231.dll" />
+    <Content Include="ApplicationPackageRoot\HL7.Fabric.ReceiverHostPkg\Code\NHapiTools.Model.V24.dll" />
+    <Content Include="ApplicationPackageRoot\HL7.Fabric.ReceiverHostPkg\Code\NHapiTools.Model.V25.dll" />
+    <Content Include="ApplicationPackageRoot\HL7.Fabric.ReceiverHostPkg\Code\NHapiTools.Model.V251.dll" />
+    <Content Include="ApplicationPackageRoot\HL7.Fabric.ReceiverHostPkg\Code\SuperSocket.Agent.exe" />
+    <Content Include="ApplicationPackageRoot\HL7.Fabric.ReceiverHostPkg\Code\SuperSocket.Common.dll" />
+    <Content Include="ApplicationPackageRoot\HL7.Fabric.ReceiverHostPkg\Code\SuperSocket.Common.xml" />
+    <Content Include="ApplicationPackageRoot\HL7.Fabric.ReceiverHostPkg\Code\SuperSocket.Dlr.dll" />
+    <Content Include="ApplicationPackageRoot\HL7.Fabric.ReceiverHostPkg\Code\SuperSocket.Dlr.XML" />
+    <Content Include="ApplicationPackageRoot\HL7.Fabric.ReceiverHostPkg\Code\SuperSocket.Facility.dll" />
+    <Content Include="ApplicationPackageRoot\HL7.Fabric.ReceiverHostPkg\Code\SuperSocket.Facility.xml" />
+    <Content Include="ApplicationPackageRoot\HL7.Fabric.ReceiverHostPkg\Code\SuperSocket.ServerManager.dll" />
+    <Content Include="ApplicationPackageRoot\HL7.Fabric.ReceiverHostPkg\Code\SuperSocket.SocketBase.dll" />
+    <Content Include="ApplicationPackageRoot\HL7.Fabric.ReceiverHostPkg\Code\SuperSocket.SocketBase.xml" />
+    <Content Include="ApplicationPackageRoot\HL7.Fabric.ReceiverHostPkg\Code\SuperSocket.SocketEngine.dll" />
+    <Content Include="ApplicationPackageRoot\HL7.Fabric.ReceiverHostPkg\Code\SuperSocket.SocketEngine.xml" />
+    <Content Include="ApplicationPackageRoot\HL7.Fabric.ReceiverHostPkg\Code\SuperSocket.SocketService.exe" />
+    <Content Include="ApplicationPackageRoot\HL7.Fabric.ReceiverHostPkg\Code\SuperSocket.WebSocket.dll" />
+    <Content Include="ApplicationPackageRoot\HL7.Fabric.ReceiverHostPkg\Config\Settings.xml" />
+    <Content Include="ApplicationPackageRoot\HL7.Fabric.ReceiverHostPkg\ServiceManifest.xml" />
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
+  <PropertyGroup>
+    <ApplicationProjectTargetsPath>$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Service Fabric Tools\Microsoft.VisualStudio.Azure.Fabric.ApplicationProject.targets</ApplicationProjectTargetsPath>
+  </PropertyGroup>
+  <Import Project="$(ApplicationProjectTargetsPath)" Condition="Exists('$(ApplicationProjectTargetsPath)')" />
+  <Import Project="..\packages\Microsoft.VisualStudio.Azure.Fabric.MSBuild.1.5.0\build\Microsoft.VisualStudio.Azure.Fabric.Application.targets" Condition="Exists('..\packages\Microsoft.VisualStudio.Azure.Fabric.MSBuild.1.5.0\build\Microsoft.VisualStudio.Azure.Fabric.Application.targets')" />
+</Project>
