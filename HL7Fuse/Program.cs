@@ -17,6 +17,7 @@ using System.Runtime.Remoting;
 using System.Runtime.Remoting.Channels;
 using System.Runtime.Remoting.Channels.Ipc;
 using System.ServiceProcess;
+using log4net;
 
 namespace HL7Fuse
 {
@@ -24,7 +25,7 @@ namespace HL7Fuse
     {
         private static Dictionary<string, ControlCommand> m_CommandHandlers = new Dictionary<string, ControlCommand>((IEqualityComparer<string>)StringComparer.OrdinalIgnoreCase);
         private static bool setConsoleColor;
-
+        //private static readonly ILog log = LogManager.GetLogger(typeof(Program));
         static Program()
         {
         }
@@ -42,7 +43,7 @@ namespace HL7Fuse
                 string str = string.Empty;
                 if (args == null || args.Length < 1)
                 {
-                    Console.WriteLine("Welcome to HL7Fuse!");
+                    HL7Fuse.Logging.Logger.Debug("Welcome to HL7Fuse!");
                     Console.WriteLine("Please press a key to continue...");
                     Console.WriteLine("-[r]: Run this application as a console application;");
                     Console.WriteLine("-[i]: Install this application as a Windows Service;");
@@ -177,7 +178,8 @@ namespace HL7Fuse
                         Console.ReadKey();
                         return;
                     case StartResult.Success:
-                        Console.WriteLine("The HL7Fuse has been started!");
+
+                        HL7Fuse.Logging.Logger.Debug("XX:The HL7Fuse has been started!");
                         break;
                     case StartResult.PartialSuccess:
                         Program.SetConsoleColor(ConsoleColor.Red);
